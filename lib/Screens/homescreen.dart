@@ -9,6 +9,7 @@ class HomeScreen extends StatelessWidget {
     return AnnotatedRegion(
       value: const SystemUiOverlayStyle(
         statusBarColor: Color(0xff22343C),
+        systemNavigationBarColor: Color(0xff22343C),
       ),
       child: Scaffold(
         backgroundColor: const Color(0xff22343C),
@@ -16,13 +17,13 @@ class HomeScreen extends StatelessWidget {
           padding: const EdgeInsets.only(
             left: 32,
             right: 32,
-            top: 72,
           ),
           child: ListView(
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
+                  const SizedBox(height: 64),
                   const Text(
                     "Feed",
                     style: TextStyle(
@@ -41,7 +42,7 @@ class HomeScreen extends StatelessWidget {
                         decoration: const BoxDecoration(
                           color: Color(0xff3ED598),
                           borderRadius: BorderRadius.all(
-                            Radius.circular(16),
+                            Radius.circular(24),
                           ),
                         ),
                       ),
@@ -109,7 +110,7 @@ class HomeScreen extends StatelessWidget {
                     decoration: const BoxDecoration(
                       color: Color(0xff30444E),
                       borderRadius: BorderRadius.all(
-                        Radius.circular(16),
+                        Radius.circular(24),
                       ),
                     ),
                     child: Padding(
@@ -184,7 +185,7 @@ class HomeScreen extends StatelessWidget {
                     decoration: const BoxDecoration(
                       color: Color(0xff30444E),
                       borderRadius: BorderRadius.all(
-                        Radius.circular(16),
+                        Radius.circular(24),
                       ),
                     ),
                     child: Padding(
