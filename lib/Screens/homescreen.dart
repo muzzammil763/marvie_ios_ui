@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class Feed1 extends StatelessWidget {
+  const Feed1({super.key});
 
   @override
   Widget build(BuildContext context) {
