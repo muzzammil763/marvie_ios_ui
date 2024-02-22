@@ -104,7 +104,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Container(
-                    height: 270,
+                    height: 280,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       color: Color(0xff30444E),
@@ -112,7 +112,64 @@ class HomeScreen extends StatelessWidget {
                         Radius.circular(16),
                       ),
                     ),
-                  )
+                    child: Padding(
+                      padding: const EdgeInsets.all(24),
+                      child: Column(
+                        children: [
+                          Container(
+                            height: 150,
+                            width: double.infinity,
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(16),
+                              color: Colors.red,
+                            ),
+                          ),
+                          const SizedBox(
+                            height: 24,
+                          ),
+                          const Row(
+                            children: [
+                              Text(
+                                "Weekly Progress",
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.bold,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              Spacer(),
+                              Icon(
+                                Icons.favorite,
+                                color: Colors.white54,
+                                size: 18,
+                              ),
+                              SizedBox(width: 4),
+                              Text(
+                                "42 likes",
+                                style: TextStyle(
+                                  color: Colors.white54,
+                                ),
+                              ),
+                            ],
+                          ),
+                          const Spacer(),
+                          Row(
+                            children: [
+                              const Text(
+                                "Weekly progress on dieting",
+                                style: TextStyle(
+                                  color: Colors.white54,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              Spacer(),
+                            ],
+                          ),
+                          const Spacer(),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ],
