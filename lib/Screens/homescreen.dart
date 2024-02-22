@@ -1,11 +1,5 @@
-import 'dart:ui';
-
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
-import 'package:flutter/rendering.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter/widgets.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -67,7 +61,7 @@ class HomeScreen extends StatelessWidget {
                         ),
                       ),
                       Positioned(
-                        left: 32,
+                        left: 24,
                         top: 32,
                         child: Row(
                           children: [
@@ -83,7 +77,7 @@ class HomeScreen extends StatelessWidget {
                                 color: Colors.white,
                               ),
                             ),
-                            const SizedBox(width: 16),
+                            const SizedBox(width: 12),
                             const Text(
                               "Weekly\nProgress",
                               style: TextStyle(
@@ -94,7 +88,18 @@ class HomeScreen extends StatelessWidget {
                             ),
                           ],
                         ),
-                      )
+                      ),
+                      const Positioned(
+                        left: 24,
+                        bottom: 32,
+                        child: Text(
+                          "It looks like you are on\ntrack. Please continue to\nfollow your daily plan",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 15.5,
+                          ),
+                        ),
+                      ),
                     ],
                   ),
                   const SizedBox(height: 16),
