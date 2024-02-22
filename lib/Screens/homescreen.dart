@@ -23,7 +23,7 @@ class HomeScreen extends StatelessWidget {
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  const SizedBox(height: 64),
+                  const SizedBox(height: 72),
                   const Text(
                     "Feed",
                     style: TextStyle(
@@ -105,7 +105,7 @@ class HomeScreen extends StatelessWidget {
                   ),
                   const SizedBox(height: 16),
                   Container(
-                    height: 280,
+                    height: 260,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       color: Color(0xff30444E),
@@ -113,36 +113,36 @@ class HomeScreen extends StatelessWidget {
                         Radius.circular(24),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              color: Colors.white54,
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(16),
-                              child: Image.asset(
-                                "assets/images/demoimage.png",
-                                fit: BoxFit.cover,
-                              ),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 170,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.white54,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.asset(
+                              "assets/images/demoimage.png",
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox(
-                            height: 24,
-                          ),
-                          const Row(
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 24),
+                          child: Row(
                             children: [
                               Text(
                                 "Weekly Progress",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                  fontSize: 17,
                                 ),
                               ),
                               Spacer(),
@@ -153,15 +153,18 @@ class HomeScreen extends StatelessWidget {
                               ),
                               SizedBox(width: 4),
                               Text(
-                                "42 likes",
+                                "44 likes",
                                 style: TextStyle(
                                   color: Colors.white54,
                                 ),
                               ),
                             ],
                           ),
-                          const Spacer(),
-                          const Row(
+                        ),
+                        const SizedBox(height: 4),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 24),
+                          child: Row(
                             children: [
                               Text(
                                 "Weekly progress on dieting",
@@ -170,17 +173,15 @@ class HomeScreen extends StatelessWidget {
                                   fontSize: 14,
                                 ),
                               ),
-                              Spacer(),
                             ],
                           ),
-                          const Spacer(),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                   const SizedBox(height: 16),
                   Container(
-                    height: 280,
+                    height: 260,
                     width: double.infinity,
                     decoration: const BoxDecoration(
                       color: Color(0xff30444E),
@@ -188,36 +189,36 @@ class HomeScreen extends StatelessWidget {
                         Radius.circular(24),
                       ),
                     ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(24),
-                      child: Column(
-                        children: [
-                          Container(
-                            height: 150,
-                            width: double.infinity,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(16),
-                              color: Colors.white54,
-                            ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(16),
-                              child: Image.asset(
-                                "assets/images/demoimage.png",
-                                fit: BoxFit.cover,
-                              ),
+                    child: Column(
+                      children: [
+                        Container(
+                          height: 170,
+                          width: double.infinity,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16),
+                            color: Colors.white54,
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: Image.asset(
+                              "assets/images/demoimage.png",
+                              fit: BoxFit.cover,
                             ),
                           ),
-                          const SizedBox(
-                            height: 24,
-                          ),
-                          const Row(
+                        ),
+                        const SizedBox(
+                          height: 16,
+                        ),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 24),
+                          child: Row(
                             children: [
                               Text(
                                 "Weekly Progress",
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
-                                  fontSize: 16,
+                                  fontSize: 17,
                                 ),
                               ),
                               Spacer(),
@@ -228,15 +229,18 @@ class HomeScreen extends StatelessWidget {
                               ),
                               SizedBox(width: 4),
                               Text(
-                                "42 likes",
+                                "99 likes",
                                 style: TextStyle(
                                   color: Colors.white54,
                                 ),
                               ),
                             ],
                           ),
-                          const Spacer(),
-                          const Row(
+                        ),
+                        const SizedBox(height: 4),
+                        const Padding(
+                          padding: EdgeInsets.symmetric(horizontal: 24),
+                          child: Row(
                             children: [
                               Text(
                                 "Weekly progress on dieting",
@@ -245,12 +249,10 @@ class HomeScreen extends StatelessWidget {
                                   fontSize: 14,
                                 ),
                               ),
-                              Spacer(),
                             ],
                           ),
-                          const Spacer(),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ],
