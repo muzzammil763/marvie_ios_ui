@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/Screens/feed1.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -28,7 +29,14 @@ class ScreenSelecter extends StatelessWidget {
           Column(
             children: [
               ElevatedButton(
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const Feed1(),
+                    ),
+                  );
+                },
                 child: Container(
                   height: 60,
                   width: double.infinity,

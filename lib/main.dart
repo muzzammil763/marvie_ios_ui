@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/Screens/screen_selecter.dart';
-import 'Screens/homescreen.dart';
+import 'Screens/feed1.dart';
 
 void main() {
   runApp(const MyApp());
