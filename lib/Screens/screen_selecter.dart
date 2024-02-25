@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:marvie/Screens/feed_one.dart';
 import 'package:marvie/Screens/feed_three.dart';
 import 'package:marvie/Screens/feed_two.dart';
@@ -9,83 +10,89 @@ class ScreenSelecter extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.surface,
-        title: Text(
-          "Select Screen",
-          style: TextStyle(
-            color: Theme.of(context).colorScheme.onSurface,
-            fontSize: 18,
+    return AnnotatedRegion(
+      value: SystemUiOverlayStyle(
+        statusBarColor: Theme.of(context).colorScheme.surface,
+        systemNavigationBarColor: Theme.of(context).colorScheme.onSurface,
+      ),
+      child: Scaffold(
+        appBar: AppBar(
+          backgroundColor: Theme.of(context).colorScheme.surface,
+          title: Text(
+            "Select Screen",
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurface,
+              fontSize: 18,
+            ),
           ),
         ),
-      ),
-      body: Padding(
-        padding: const EdgeInsets.all(12),
-        child: Column(
-          children: [
-            Row(
-              children: [
-                Expanded(
-                  child: HomeButton(
-                    title: "Splash",
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const Splash(),
-                        ),
-                      );
-                    },
+        body: Padding(
+          padding: const EdgeInsets.all(12),
+          child: Column(
+            children: [
+              Row(
+                children: [
+                  Expanded(
+                    child: HomeButton(
+                      title: "Splash",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const Splash(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: HomeButton(
-                    title: "Feed",
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const FeedOne(),
-                        ),
-                      );
-                    },
+                  Expanded(
+                    child: HomeButton(
+                      title: "Feed",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FeedOne(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
-            ),
-            const SizedBox(height: 12),
-            Row(
-              children: [
-                Expanded(
-                  child: HomeButton(
-                    title: "Feed Two",
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const FeedTwo(),
-                        ),
-                      );
-                    },
+                ],
+              ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: HomeButton(
+                      title: "Feed Two",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FeedTwo(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-                Expanded(
-                  child: HomeButton(
-                    title: "Feed Three",
-                    onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const FeedThree(),
-                        ),
-                      );
-                    },
+                  Expanded(
+                    child: HomeButton(
+                      title: "Feed Three",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FeedThree(),
+                          ),
+                        );
+                      },
+                    ),
                   ),
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+            ],
+          ),
         ),
       ),
     );
