@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marvie/Screens/feed_one.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -7,10 +8,13 @@ class ScreenSelecter extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: const Color(0xff22343C),
-        title: const Text(
+        backgroundColor: Theme.of(context).colorScheme.surface,
+        title: Text(
           "Select Screen",
-          style: TextStyle(color: Colors.white, fontSize: 18),
+          style: TextStyle(
+            color: Theme.of(context).colorScheme.onSurface,
+            fontSize: 18,
+          ),
         ),
       ),
       body: Padding(
@@ -28,7 +32,14 @@ class ScreenSelecter extends StatelessWidget {
                 Expanded(
                   child: HomeButton(
                     title: "Feed",
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FeedOne(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
@@ -57,17 +68,16 @@ class HomeButton extends StatelessWidget {
       child: Container(
         height: 180,
         width: double.infinity,
-        decoration: const BoxDecoration(
-          color: Color(0xff1f2c33),
+        decoration: BoxDecoration(
+          color: Theme.of(context).colorScheme.surface,
           shape: BoxShape.circle,
         ),
         child: Center(
           child: Text(
             title,
-            style: const TextStyle(
-              color: Colors.white,
+            style: TextStyle(
+              color: Theme.of(context).colorScheme.onSurface,
               fontSize: 15,
-              fontWeight: FontWeight.bold,
             ),
           ),
         ),

@@ -7,12 +7,12 @@ class FeedOne extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AnnotatedRegion(
-      value: const SystemUiOverlayStyle(
-        statusBarColor: Color(0xff22343C),
-        systemNavigationBarColor: Color(0xff22343C),
+      value: SystemUiOverlayStyle(
+        statusBarColor: Theme.of(context).colorScheme.surface,
+        systemNavigationBarColor: Theme.of(context).colorScheme.surface,
       ),
       child: Scaffold(
-        backgroundColor: const Color(0xff22343C),
+        backgroundColor: Theme.of(context).colorScheme.surface,
         body: Padding(
           padding: const EdgeInsets.only(
             left: 32,
@@ -24,12 +24,12 @@ class FeedOne extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 72),
-                  const Text(
+                  Text(
                     "Feed",
                     style: TextStyle(
                       fontSize: 40,
                       fontWeight: FontWeight.bold,
-                      color: Colors.white,
+                      color: Theme.of(context).colorScheme.onSurface,
                       letterSpacing: 1,
                     ),
                   ),
@@ -39,23 +39,24 @@ class FeedOne extends StatelessWidget {
                       Container(
                         height: 200,
                         width: double.infinity,
-                        decoration: const BoxDecoration(
-                          color: Color(0xff3ED598),
-                          borderRadius: BorderRadius.all(
+                        decoration: BoxDecoration(
+                          color: Theme.of(context).colorScheme.primary,
+                          borderRadius: const BorderRadius.all(
                             Radius.circular(24),
                           ),
                         ),
                       ),
-                      const Positioned(
+                      Positioned(
                         top: 70,
                         right: 32,
                         child: CircleAvatar(
                           radius: 30,
-                          backgroundColor: Colors.white,
+                          backgroundColor:
+                              Theme.of(context).colorScheme.onSurface,
                           child: Text(
                             "ok",
                             style: TextStyle(
-                              color: Color(0xff3ED598),
+                              color: Theme.of(context).colorScheme.primary,
                               fontWeight: FontWeight.bold,
                             ),
                           ),
@@ -73,30 +74,30 @@ class FeedOne extends StatelessWidget {
                                 color: Colors.white.withOpacity(0.3),
                                 borderRadius: BorderRadius.circular(12),
                               ),
-                              child: const Icon(
+                              child: Icon(
                                 Icons.star_border_outlined,
-                                color: Colors.white,
+                                color: Theme.of(context).colorScheme.onSurface,
                               ),
                             ),
                             const SizedBox(width: 12),
-                            const Text(
+                            Text(
                               "Weekly\nProgress",
                               style: TextStyle(
                                 fontWeight: FontWeight.bold,
-                                color: Colors.white,
+                                color: Theme.of(context).colorScheme.onSurface,
                                 letterSpacing: 1,
                               ),
                             ),
                           ],
                         ),
                       ),
-                      const Positioned(
+                      Positioned(
                         left: 24,
                         bottom: 32,
                         child: Text(
                           "It looks like you are on\ntrack. Please continue to\nfollow your daily plan",
                           style: TextStyle(
-                            color: Colors.white,
+                            color: Theme.of(context).colorScheme.onSurface,
                             fontSize: 15.5,
                           ),
                         ),
@@ -107,9 +108,9 @@ class FeedOne extends StatelessWidget {
                   Container(
                     height: 260,
                     width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff30444E),
-                      borderRadius: BorderRadius.all(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primaryContainer,
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(24),
                       ),
                     ),
@@ -120,7 +121,10 @@ class FeedOne extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
-                            color: Colors.white54,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withOpacity(0.5),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
@@ -133,43 +137,53 @@ class FeedOne extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           child: Row(
                             children: [
                               Text(
                                 "Weekly Progress",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color:
+                                      Theme.of(context).colorScheme.onSurface,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Icon(
                                 Icons.favorite,
-                                color: Colors.white54,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
                                 size: 18,
                               ),
-                              SizedBox(width: 4),
+                              const SizedBox(width: 4),
                               Text(
                                 "44 likes",
                                 style: TextStyle(
-                                  color: Colors.white54,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withOpacity(0.5),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         const SizedBox(height: 4),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           child: Row(
                             children: [
                               Text(
                                 "Weekly progress on dieting",
                                 style: TextStyle(
-                                  color: Colors.white54,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withOpacity(0.5),
                                   fontSize: 14,
                                 ),
                               ),
@@ -183,9 +197,9 @@ class FeedOne extends StatelessWidget {
                   Container(
                     height: 260,
                     width: double.infinity,
-                    decoration: const BoxDecoration(
-                      color: Color(0xff30444E),
-                      borderRadius: BorderRadius.all(
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.primaryContainer,
+                      borderRadius: const BorderRadius.all(
                         Radius.circular(24),
                       ),
                     ),
@@ -196,7 +210,10 @@ class FeedOne extends StatelessWidget {
                           width: double.infinity,
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(16),
-                            color: Colors.white54,
+                            color: Theme.of(context)
+                                .colorScheme
+                                .onSurface
+                                .withOpacity(0.5),
                           ),
                           child: ClipRRect(
                             borderRadius: BorderRadius.circular(16),
@@ -209,43 +226,53 @@ class FeedOne extends StatelessWidget {
                         const SizedBox(
                           height: 16,
                         ),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           child: Row(
                             children: [
                               Text(
                                 "Weekly Progress",
                                 style: TextStyle(
-                                  color: Colors.white,
+                                  color:
+                                      Theme.of(context).colorScheme.onSurface,
                                   fontWeight: FontWeight.bold,
                                   fontSize: 17,
                                 ),
                               ),
-                              Spacer(),
+                              const Spacer(),
                               Icon(
                                 Icons.favorite,
-                                color: Colors.white54,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
                                 size: 18,
                               ),
-                              SizedBox(width: 4),
+                              const SizedBox(width: 4),
                               Text(
                                 "99 likes",
                                 style: TextStyle(
-                                  color: Colors.white54,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withOpacity(0.5),
                                 ),
                               ),
                             ],
                           ),
                         ),
                         const SizedBox(height: 4),
-                        const Padding(
-                          padding: EdgeInsets.symmetric(horizontal: 24),
+                        Padding(
+                          padding: const EdgeInsets.symmetric(horizontal: 24),
                           child: Row(
                             children: [
                               Text(
                                 "Weekly progress on dieting",
                                 style: TextStyle(
-                                  color: Colors.white54,
+                                  color: Theme.of(context)
+                                      .colorScheme
+                                      .onSurface
+                                      .withOpacity(0.5),
                                   fontSize: 14,
                                 ),
                               ),
