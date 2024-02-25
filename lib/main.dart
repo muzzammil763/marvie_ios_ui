@@ -18,6 +18,8 @@ class MyApp extends StatelessWidget {
           primary: Color(0xff40DF9F),
           onSurface: Colors.white,
           primaryContainer: Color(0xff30444E),
+          secondary: Color(0xffFF575F),
+          onSecondary: Color(0xffFF464F),
         ),
       ),
       debugShowCheckedModeBanner: false,
