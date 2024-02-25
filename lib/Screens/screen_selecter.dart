@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marvie/Screens/feed1.dart';
+import 'package:marvie/Screens/feed_one.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -33,7 +33,7 @@ class ScreenSelecter extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => const Feed1(),
+                      builder: (context) => const FeedOne(),
                     ),
                   );
                 },
@@ -46,7 +46,7 @@ class ScreenSelecter extends StatelessWidget {
                   ),
                   child: const Center(
                     child: Text(
-                      "Feed 1",
+                      "Feed One",
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.bold,

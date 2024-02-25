@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-class Feed1 extends StatelessWidget {
-  const Feed1({super.key});
+class FeedOne extends StatelessWidget {
+  const FeedOne({super.key});
 
   @override
   Widget build(BuildContext context) {
