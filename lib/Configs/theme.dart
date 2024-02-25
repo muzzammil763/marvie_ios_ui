@@ -7,7 +7,7 @@ var theme = ThemeData(
     surface: bgColor,
     primary: primaryColor,
     onSurface: fontColor,
-    primaryContainer: divColor,
+    primaryContainer: lightbgColor,
     onPrimaryContainer: fontColor,
   ),
 );
