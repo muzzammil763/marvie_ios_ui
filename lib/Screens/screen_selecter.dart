@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/Screens/feed_one.dart';
+import 'package:marvie/Screens/splash.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -26,7 +27,14 @@ class ScreenSelecter extends StatelessWidget {
                 Expanded(
                   child: HomeButton(
                     title: "Splash",
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const Splash(),
+                        ),
+                      );
+                    },
                   ),
                 ),
                 Expanded(
