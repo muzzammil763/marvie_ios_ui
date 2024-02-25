@@ -83,7 +83,7 @@ class FeedTwo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 24),
             child: Container(
-              height: 500,
+              height: 550,
               width: double.infinity,
               decoration: BoxDecoration(
                 color: Theme.of(context).colorScheme.primaryContainer,
@@ -92,10 +92,13 @@ class FeedTwo extends StatelessWidget {
                 ),
               ),
               child: Padding(
-                padding: const EdgeInsets.all(24),
+                padding: const EdgeInsets.only(
+                  left: 24,
+                  right: 24,
+                  top: 32,
+                ),
                 child: Column(
                   children: [
-                    const SizedBox(height: 8),
                     Row(
                       children: [
                         ClipRRect(
@@ -250,6 +253,59 @@ class FeedTwo extends StatelessWidget {
                           style: TextStyle(
                             color: Colors.white54,
                             letterSpacing: -0.5,
+                          ),
+                        ),
+                      ],
+                    ),
+                    const SizedBox(height: 12),
+                    Divider(
+                      color: Colors.grey.withOpacity(0.5),
+                      thickness: 2,
+                      indent: 50,
+                      endIndent: 50,
+                    ),
+                    const SizedBox(height: 8),
+                    Row(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(32),
+                          child: Image.asset(
+                            "assets/images/demoimage.png",
+                            height: 40,
+                            width: 40,
+                            fit: BoxFit.cover,
+                          ),
+                        ),
+                        const SizedBox(width: 16),
+                        Expanded(
+                          child: TextField(
+                            style: TextStyle(
+                              color: Theme.of(context).colorScheme.onSurface,
+                              fontWeight: FontWeight.normal,
+                              fontSize: 15,
+                            ),
+                            decoration: InputDecoration(
+                              suffixIcon: Icon(
+                                Icons.attach_file,
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
+                                size: 18,
+                              ),
+                              hintText: "Write comment ..",
+                              hintStyle: TextStyle(
+                                color: Theme.of(context)
+                                    .colorScheme
+                                    .onSurface
+                                    .withOpacity(0.5),
+                                fontWeight: FontWeight.normal,
+                                fontSize: 15,
+                              ),
+                              border: InputBorder.none,
+                              filled: true,
+                              fillColor: Theme.of(context).colorScheme.surface,
+                            ),
                           ),
                         ),
                       ],
