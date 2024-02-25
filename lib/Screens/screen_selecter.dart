@@ -52,6 +52,23 @@ class ScreenSelecter extends StatelessWidget {
                 ),
               ],
             ),
+            SizedBox(height: 12),
+            Row(
+              children: [
+                Expanded(
+                  child: HomeButton(
+                    title: "Feed Two",
+                    onTap: () {},
+                  ),
+                ),
+                Expanded(
+                  child: HomeButton(
+                    title: "Feed Three",
+                    onTap: () {},
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
