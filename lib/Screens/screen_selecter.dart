@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:marvie/Screens/feed_one.dart';
+import 'package:marvie/Screens/feed_three.dart';
 import 'package:marvie/Screens/feed_two.dart';
 import 'package:marvie/Screens/splash.dart';
 
@@ -72,7 +73,14 @@ class ScreenSelecter extends StatelessWidget {
                 Expanded(
                   child: HomeButton(
                     title: "Feed Three",
-                    onTap: () {},
+                    onTap: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const FeedThree(),
+                        ),
+                      );
+                    },
                   ),
                 ),
               ],
