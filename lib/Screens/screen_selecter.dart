@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:marvie/Screens/feed_one.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -11,53 +10,67 @@ class ScreenSelecter extends StatelessWidget {
         backgroundColor: const Color(0xff22343C),
         title: const Text(
           "Select Screen",
-          style: TextStyle(
-            color: Colors.white,
-          ),
+          style: TextStyle(color: Colors.white, fontSize: 18),
         ),
       ),
-      body: Column(
-        children: [
-          Container(
-            height: 10,
-            width: double.infinity,
-            color: const Color(0xff22343C),
-          ),
-          const SizedBox(
-            height: 24,
-          ),
-          Column(
-            children: [
-              ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const FeedOne(),
-                    ),
-                  );
-                },
-                child: Container(
-                  height: 60,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    color: const Color(0xff22343C),
-                    borderRadius: BorderRadius.circular(12),
-                  ),
-                  child: const Center(
-                    child: Text(
-                      "Feed One",
-                      style: TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.bold,
-                      ),
-                    ),
+      body: Padding(
+        padding: const EdgeInsets.all(12),
+        child: Column(
+          children: [
+            Row(
+              children: [
+                Expanded(
+                  child: HomeButton(
+                    title: "Splash",
+                    onTap: () {},
                   ),
                 ),
-              )
-            ],
+                Expanded(
+                  child: HomeButton(
+                    title: "Feed",
+                    onTap: () {},
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class HomeButton extends StatelessWidget {
+  final String title;
+  final VoidCallback onTap;
+
+  const HomeButton({
+    super.key,
+    required this.title,
+    required this.onTap,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: onTap,
+      child: Container(
+        height: 180,
+        width: double.infinity,
+        decoration: const BoxDecoration(
+          color: Color(0xff1f2c33),
+          shape: BoxShape.circle,
+        ),
+        child: Center(
+          child: Text(
+            title,
+            style: const TextStyle(
+              color: Colors.white,
+              fontSize: 15,
+              fontWeight: FontWeight.bold,
+            ),
           ),
-        ],
+        ),
       ),
     );
   }
