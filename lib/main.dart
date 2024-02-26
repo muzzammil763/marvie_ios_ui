@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
           primaryContainer: Color(0xff30444E),
           secondary: Color(0xffFF575F),
           onSecondary: Color(0xffFF464F),
+          tertiary: Colors.amberAccent,
         ),
       ),
       debugShowCheckedModeBanner: false,
