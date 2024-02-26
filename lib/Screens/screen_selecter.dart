@@ -4,6 +4,8 @@ import 'package:marvie/Screens/feed_one.dart';
 import 'package:marvie/Screens/feed_three.dart';
 import 'package:marvie/Screens/feed_two.dart';
 import 'package:marvie/Screens/splash.dart';
+import 'package:marvie/Screens/statistics_one.dart';
+import 'package:marvie/Screens/statistics_two.dart';
 
 class ScreenSelecter extends StatelessWidget {
   const ScreenSelecter({super.key});
@@ -101,7 +103,7 @@ class ScreenSelecter extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const FeedTwo(),
+                            builder: (context) => const StatisticsOne(),
                           ),
                         );
                       },
@@ -114,7 +116,7 @@ class ScreenSelecter extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const FeedThree(),
+                            builder: (context) => const StatisticsTwo(),
                           ),
                         );
                       },
