@@ -91,6 +91,37 @@ class ScreenSelecter extends StatelessWidget {
                   ),
                 ],
               ),
+              const SizedBox(height: 12),
+              Row(
+                children: [
+                  Expanded(
+                    child: HomeButton(
+                      title: "Statistics One",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FeedTwo(),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                  Expanded(
+                    child: HomeButton(
+                      title: "Statistics Two",
+                      onTap: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const FeedThree(),
+                          ),
+                        );
+                      },
+                    ),
+                  ),
+                ],
+              ),
             ],
           ),
         ),
@@ -125,7 +156,7 @@ class HomeButton extends StatelessWidget {
             title,
             style: TextStyle(
               color: Theme.of(context).colorScheme.onSurface,
-              fontSize: 15,
+              fontSize: 13,
             ),
           ),
         ),
